@@ -1,0 +1,60 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Tariff data source",
+        "description": "Base URL of the static tariff data (GitHub Pages). Keep the default unless you host your own.",
+        "data": { "base_url": "Data base URL" }
+      },
+      "operator": {
+        "title": "Operator",
+        "data": { "operator": "Distribution operator" }
+      },
+      "tariff": {
+        "title": "Tariff group",
+        "data": { "tariff": "Tariff group" }
+      },
+      "options": {
+        "title": "Offer and settings",
+        "description": "Pick the energy offer and billing parameters. Leave the energy override empty to use the offer's price.",
+        "data": {
+          "energy_product": "Energy offer",
+          "phase": "Connection",
+          "annual_kwh": "Annual consumption [kWh] (for fixed fees)",
+          "include_vat": "Gross prices (incl. VAT)",
+          "energy_override": "Energy price override, net [PLN/kWh] (optional)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not fetch the tariff data.",
+      "invalid_override": "Invalid price — enter a number, e.g. 0.49."
+    },
+    "abort": {
+      "already_configured": "This tariff group is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Offer and settings",
+        "data": {
+          "energy_product": "Energy offer",
+          "phase": "Connection",
+          "annual_kwh": "Annual consumption [kWh] (for fixed fees)",
+          "include_vat": "Gross prices (incl. VAT)",
+          "energy_override": "Energy price override, net [PLN/kWh] (optional)"
+        }
+      }
+    },
+    "error": {
+      "invalid_override": "Invalid price — enter a number, e.g. 0.49."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "current_price": { "name": "Current price" },
+      "current_opust": { "name": "Current net-metering credit" }
+    }
+  }
+}

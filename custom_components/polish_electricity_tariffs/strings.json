@@ -1,0 +1,60 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Źródło danych taryf",
+        "description": "Adres bazowy statycznych danych (GitHub Pages). Zostaw domyślny, jeśli nie masz własnego.",
+        "data": { "base_url": "Adres bazowy danych" }
+      },
+      "operator": {
+        "title": "Operator",
+        "data": { "operator": "Operator dystrybucji" }
+      },
+      "tariff": {
+        "title": "Grupa taryfowa",
+        "data": { "tariff": "Grupa taryfowa" }
+      },
+      "options": {
+        "title": "Oferta i ustawienia",
+        "description": "Wybierz ofertę energii i parametry rozliczenia. Pole nadpisania ceny energii zostaw puste, aby użyć ceny z wybranej oferty.",
+        "data": {
+          "energy_product": "Oferta energii",
+          "phase": "Przyłącze",
+          "annual_kwh": "Roczne zużycie [kWh] (dla opłat stałych)",
+          "include_vat": "Ceny brutto (z VAT)",
+          "energy_override": "Nadpisanie ceny energii netto [PLN/kWh] (opcjonalne)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Nie udało się pobrać danych taryf.",
+      "invalid_override": "Nieprawidłowa cena — podaj liczbę, np. 0.49."
+    },
+    "abort": {
+      "already_configured": "Ta grupa taryfowa jest już skonfigurowana."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Oferta i ustawienia",
+        "data": {
+          "energy_product": "Oferta energii",
+          "phase": "Przyłącze",
+          "annual_kwh": "Roczne zużycie [kWh] (dla opłat stałych)",
+          "include_vat": "Ceny brutto (z VAT)",
+          "energy_override": "Nadpisanie ceny energii netto [PLN/kWh] (opcjonalne)"
+        }
+      }
+    },
+    "error": {
+      "invalid_override": "Nieprawidłowa cena — podaj liczbę, np. 0.49."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "current_price": { "name": "Aktualna cena" },
+      "current_opust": { "name": "Aktualny opust" }
+    }
+  }
+}
